@@ -46,6 +46,7 @@ format:
 - Descriptors/features comparable to or exceeds the number of samples
 
 - Specialized tools and approaches are needed to obtain reliable scientific insight [i.e.: regularization, dimensionality reduction]
+
 ::: footer
 
 :::
