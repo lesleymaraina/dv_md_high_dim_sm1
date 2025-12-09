@@ -1,0 +1,301 @@
+---
+title: "Why High-Dimensional Data Exists in Modern Clinical and Biomedical Research"
+author: "<br><br><span style='font-size:25px;'><strong>Lesley Chapman Hannah, Ph.D., M.S.</strong></span><br>College of Graduate Studies<br>Northeast Ohio Medical University"
+
+format: 
+  revealjs:
+    #theme: solarized
+    css: style.css
+    slide-number: true
+    chalkboard: 
+      buttons: false
+    preview-links: auto
+    logo: images/Flame.jpg
+    #css: styles.css
+    
+---
+
+## Lecture Outline
+
+
+- Define high-dimensional data [HD] visualization
+
+- Origins and sources of high-dimensional data in biomedicine
+
+- Limitations of traditional data visualization strategies
+
+- Example of high-dimensional data visualization in biomedicine
+
+
+
+
+::: footer
+
+:::
+
+
+## Definition: High-dimensional data analysis
+
+
+- Statistical and computational methods for datasets in which each sample is described by a very large number of variables—often thousands or more
+
+  - Rows = samples (n small)
+
+  - Columns = features (p huge)
+
+- Descriptors/features comparable to or exceeds the number of samples
+
+- Specialized tools and approaches are needed to obtain reliable scientific insight [i.e.: regularization, dimensionality reduction]
+::: footer
+
+:::
+
+
+
+## Origins of high dimensionality in biomedical and clinical research
+
+- Every major -omics and digital health technology now measures biology at high dimensionality
+
+- Challenge:  𝑝 $\gg$ 𝑛 - when the number of measured variables (p) vastly exceeds the number of samples (n)
+
+- Molecular and clinical measurement technologies in modern biomedicine captures thousands to millions of interrelated features per sample — making high dimensionality an intrinsic property of biological data
+
+::: footer
+
+:::
+
+## <span style="font-size:80%">Sources of high dimensionality in biomedical and clinical research</span> {.smaller}
+
+Various high-dimensional features map onto patient level data
+
+- Examples
+
+  - **Genomics**: ~20,000 genes; millions of SNPs and variants; 450k–850k CpG methylation sites. Each genome is a vector with millions of entries
+
+  - **Transcriptomics**: RNA-seq measures gene expression across 20k+ transcripts; each sample becomes a 20,000-dimensional point
+
+  - **Proteomics**: Hundreds–thousands of quantified proteins; post-translational modifications multiply effective dimensionality
+
+::: footer
+
+:::
+
+
+
+## <span style="font-size:80%">Sources of high dimensionality in biomedical and clinical research</span> {.smaller}
+
+Datasets enable discovery of disease subtypes, treatment response signatures, pathways, immune states, and phenotypes
+
+- Examples
+
+  - **Metabolomics**: Hundreds–thousands of small molecules capturing both genetic and environmental states
+
+  - **EHR and Wearables**: Longitudinal clinical data contain hundreds of categorical, temporal, and event-based features per patient; continuous sensor data effectively form multivariate time series
+
+::: footer
+
+:::
+
+
+## <span style="font-size:80%">Sources of high dimensionality in biomedical and clinical research</span> {.smaller}
+
+- A “biomarker” rarely acts alone; biological meaning arises from patterns across many variables
+
+- Disease subtypes, immune activation, and treatment response live in multivariate structure, not single features
+
+- A number of interesting patterns can arise through visualizing high dimensional data
+
+  - Visualization and modeling reveal latent axes: pathway activation, metabolic shifts, or phenotypic clusters
+
+
+::: footer
+
+:::
+
+
+
+## <span style="font-size:80%">Limitations of traditional numerical and categorical data visualization</span> {.smaller}
+
+Reminder: what traditional numerical and categorical visuals can do
+
+Plots are helpful in summarizing select high dimensional features
+
+- **Bar charts**: summarize counts of variant classes, tumor subtypes, or sample categories
+
+- **Boxplots**: compare distributions of a single gene/protein across two groups
+
+- **Scatterplots**: show relationships between pairs of numerical variables (e.g., gene expression vs protein abundance)
+
+
+::: footer
+
+:::
+
+## <span style="font-size:80%">Limitations of traditional numerical and categorical data visualization</span> {.smaller}
+
+- **Scatterplot**: 
+
+  - shows 2–3 variables 
+
+  - cannot reveal gene modules, proteomic networks, or high-dimensional manifolds
+
+- **Boxplot/bar chart**:
+
+  - cannot summarize 20,000 genes across dozens of samples—signal is diluted by volume
+
+- **Categorical comparisons** (e.g., subtype $\rightarrow$ gene expression) fail because:
+
+  - Biological subtypes depend on thousands of interacting features, not a few
+
+  - Univariate comparisons hide multi-feature relationships
+
+::: footer
+:::
+
+
+## <span style="font-size:80%">Core functions of High-Dimensional Data Analysis</span> {.smaller}
+
+High-dimensional analysis transforms massive, complex datasets into interpretable structure through five key steps:
+
+- **Compression** — Reduces thousands of variables into 2D or 3D summaries (e.g., PCA, UMAP) to reveal dominant patterns
+
+- **Pattern Discovery** — Uncovers clusters, trajectories, or functional modules that describe biological or clinical variation
+
+- **Organization** — Orders samples or features so meaningful relationships and gradients become visible
+
+- **Denoising** — Filters out technical noise or irrelevant variation, allowing true biological signal to emerge
+
+- **Abstraction** — Elevates raw measurements into conceptual understanding—linking data patterns to mechanisms and insights
+
+
+::: footer
+
+:::
+
+
+## <span style="font-size:80%">HD Analysis and Biomedical Discovery</span> {.smaller}
+
+- High dimensional (HD) data captures heterogeneity, which is where biological insight often lies
+
+- Low-dimensional summaries collapse heterogeneity $\rightarrow$ lose key biological insight
+
+- Discovery of hidden biological states:
+
+  - Cancer subtypes
+
+  - Immune activation/exhaustion states
+
+  - Pathways and modules
+
+  - Rare phenotypic clusters
+
+::: footer
+
+:::
+
+
+## <span style="font-size:80%">How High-Dimensional Visualization Reveals Molecular Subtypes</span> {.smaller}
+
+In biomedical science, one of the most important patterns revealed by high-dimensional visualization is the emergence of molecular subtypes—groups of patients or samples that share a coordinated biological program
+
+- Cancer subtypes (e.g., luminal vs. basal TNBC; immune-hot vs. immune-cold tumors) are not visible when examining one gene at a time
+
+- Rare-disease signatures exhibit multi-feature structure: patterns distributed across many correlated genes
+
+- Dimensionality-reduction techniques—like PCA, t-SNE, or UMAP—create visual maps where samples with similar multi-gene expression profiles cluster together
+
+- Subtypes emerge visually as clusters or gradients, revealing hidden heterogeneity within what once looked like a single disease
+
+::: footer
+
+:::
+
+## <span style="font-size:80%">How High-Dimensional Visualization Reveals Molecular Subtypes</span> {.smaller}
+
+In biomedical science, one of the most important patterns revealed by high-dimensional visualization is the emergence of molecular subtypes—groups of patients or samples that share a coordinated biological program
+
+- Cancer subtypes (e.g., luminal vs. basal TNBC; immune-hot vs. immune-cold tumors) are not visible when examining one gene at a time
+
+- Rare-disease signatures exhibit multi-feature structure: patterns distributed across many correlated genes
+
+- Dimensionality-reduction techniques—like PCA, t-SNE, or UMAP—create visual maps where samples with similar multi-gene expression profiles cluster together
+
+- Subtypes emerge visually as clusters or gradients, revealing hidden heterogeneity within what once looked like a single disease
+
+::: footer
+
+:::
+
+## <span style="font-size:60%">How High-Dimensional Visualization Reveals Molecular Subtypes</span> {.smaller}
+
+::: columns
+::: {.column width="50%"}
+- Figure shows : breast tumors fall into distinct expression clusters corresponding to the PAM50 molecular subtypes
+
+- Heatmap clustering orders the rows (genes) and columns (samples) so that similar profiles align together
+
+- Red/blue pattern reflects multi-gene expression programs — no single gene defines a subtype
+
+- Each bar of color at the top indicates a PAM50 molecular subtype: Basal, HER2-enriched, Luminal-A, Luminal-B, or Normal-like
+
+
+:::
+
+::: {.column width="50%"}
+![](images/breast_cancer_figure.png){.border .border-thick}
+
+::: incremental
+
+
+:::
+:::
+<span style="font-size:40%">Poudel,et.al.npj Breast Cancer volume 5, Article number:21(2019)</span>
+:::
+::: footer
+:::
+
+
+## <span style="font-size:60%">How High-Dimensional Visualization Reveals Molecular Subtypes</span> {.smaller}
+
+::: columns
+::: {.column width="50%"}
+- HD Data Visualization : reduces thousands of gene features into interpretable visual structures
+
+- Figure uses clustering and color encoding to make hidden biological organization visible
+
+  - breast tumors are not one disease
+
+  - Breast tumors: multiple biologically distinct entities defined by coordinated gene expression
+
+
+
+:::
+
+::: {.column width="50%"}
+![](images/breast_cancer_figure.png){.border .border-thick}
+
+::: incremental
+
+
+:::
+:::
+<span style="font-size:40%">Poudel,et.al.npj Breast Cancer volume 5, Article number:21(2019)</span>
+:::
+::: footer
+:::
+
+
+## <span style="font-size:80%">Summary</span> {.smaller}
+
+- Modern biomedicine generates inherently high-dimensional data—every sequencing or imaging platform captures thousands of features per patient
+
+- One of the goals of high dimensional data visualization is to convert overwhelming data into a visual model of biological organization
+
+- High dimensional data visualization turns invisibility into structure, revealing patterns like tumor subtypes or immune states that cannot be seen one gene at a time
+
+- Effective visualization translates computation into intuition
+
+
+::: footer
+
+:::
